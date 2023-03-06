@@ -1,7 +1,7 @@
 import random
 
 
-def get_player_name():
+def get_player_name():  # get player name
     name = input("Write your name: ")
     return name
 
