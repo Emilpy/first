@@ -45,7 +45,7 @@ player_choise(computer_number, "Computer")
 
 def game(player_num, computer_num):
     if int(player_num) == int(computer_num):
-        print("We have REMIS")
+        print("We have DRAW")
     elif int(player_num) == 2 and int(computer_num) == 1 or int(player_num) == 1 and int(
             computer_num) == 2:  # scissor player win
         if int(player_num) == 2 and int(computer_num) == 1:
