@@ -1,77 +1,72 @@
 import random
 
 
-def getPlayerName():
+def get_player_name():
     name = input("Write your name: ")
     return name
 
 
-playerName = getPlayerName()
+player_name = get_player_name()
 
-print("Hello new player " + playerName)  # przywitanie
+print("Hello new player " + player_name)  # greeting
 
 
 # player choise number 1 - paper 2 - scissors 3 - rock
 
-def getPlayreItem():
-    plyerItemChois = input(playerName + " your item: ")
-    return plyerItemChois
+def get_playre_item():
+    plyer_item_chois = input(player_name + " your item: ")
+    return plyer_item_chois
 
 
-playerItem = str(getPlayreItem())
+playerItem = str(get_playre_item())
 
 
-def playerChoise(playerItem, playerName):
-    if int(playerItem) == 1:
-        print(playerName + " choise paper")
-    elif int(playerItem) == 2:
-        print(playerName + " choise scissors")
-    elif int(playerItem) == 3:
-        print(playerName + " choise rock")
+def player_choise(player_item, player_name):
+    if int(player_item) == 1:
+        print(player_name + " choise paper")
+    elif int(player_item) == 2:
+        print(player_name + " choise scissors")
+    elif int(player_item) == 3:
+        print(player_name + " choise rock")
     else:
         print("You chose wrong number. Try again!")
 
 
-def randomNumber(rangeStart, rangeEnd):
+def random_number(rangeStart, rangeEnd):
     number = random.randint(rangeStart, rangeEnd)  # random math
     return number
 
 
-computerNumber = (randomNumber(1, 3))
+computer_number = (random_number(1, 3))
 
-
-playerChoise(playerItem, playerName)
-playerChoise(computerNumber, "Computer")
+player_choise(playerItem, player_name)
+player_choise(computer_number, "Computer")
 
 
 def game(player_num, computer_num):
     if int(player_num) == int(computer_num):
         print("We have REMIS")
-    elif int(player_num) == 2 and int(computer_num) == 1 or int(player_num) == 1 and int(computer_num) == 2:  # scissor player win
+    elif int(player_num) == 2 and int(computer_num) == 1 or int(player_num) == 1 and int(
+            computer_num) == 2:  # scissor player win
         if int(player_num) == 2 and int(computer_num) == 1:
-            print(playerName + " win")
+            print(player_name + " win")
         elif int(player_num) == 1 and int(computer_num) == 2:
             print("Computer win")
-    elif int(player_num) == 3 and int(computer_num) == 1 or int(player_num) == 1 and int(computer_num) == 3:  # paper player win
+    elif int(player_num) == 3 and int(computer_num) == 1 or int(player_num) == 1 and int(
+            computer_num) == 3:  # paper player win
         if int(player_num) == 1 and int(computer_num) == 3:
-            print(playerName + " win")
+            print(player_name + " win")
         elif int(player_num) == 3 and int(computer_num) == 1:
             print("Computer win")
-    elif int(player_num) == 3 and int(computer_num) == 2 or int(player_num) == 2 and int(computer_num) == 3:  # rock player win
+    elif int(player_num) == 3 and int(computer_num) == 2 or int(player_num) == 2 and int(
+            computer_num) == 3:  # rock player win
         if int(player_num) == 3 and int(computer_num) == 2:
-            print(playerName + " win")
+            print(player_name + " win")
         elif int(player_num) == 2 and int(computer_num) == 3:
             print("Computer win")
-    else: print("End game")
+    else:
+        print("End game")
     return
 
 
-game(playerItem, computerNumber)
-
-
-
-
-
-
-
-
+game(playerItem, computer_number)
