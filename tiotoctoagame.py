@@ -28,10 +28,7 @@ print(borad[0])
 print("--------------")
 
 
-# borad[0] = "[O]"
-# print(borad[0])
 
-# losowanie liczby przez komutere
 def comuter_random_number():
     random_number = random.randint(1, 9)
     return random_number
@@ -45,12 +42,12 @@ pattern_o = "[o]"
 
 print("-----------------")
 
-# board1[random_num] = pattern_x
+
 board_new = board1
 board2 = board_new
 print(board2)
 random_num = comuter_random_number()
-# board2[random_num] = pattern_x
+
 board_new = board2
 board3 = board_new
 print(board3)
@@ -64,12 +61,6 @@ def update_board(pattern, number, board):
     return new_board
 
 
-# new_ = update_board(pattern_o, random_num, board1)
-# board1 = new_
-# board1 = board1
-# new_2 = update_board(pattern_o, random_num, board1)
-# board1 = new_2
-# board1 = board1
 
 print(board1)
 print(board1)
@@ -139,11 +130,5 @@ winner_pattern()
 borad_x = 3
 borad_y = 3
 
-# for n in range(3):
-#     print(n)
-
-
-# for n in range(3):
-#     board4[n] = "x"
 
 print(len(board4))
